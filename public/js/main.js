@@ -20,8 +20,12 @@
     $(window).scroll(function () {
         if ($(this).scrollTop() > 45) {
             $('.navbar').addClass('sticky-top shadow-sm');
+             // Change the image src when scrolled
+             $('#navbar-logo').attr('src', 'img/logo_blue.png');
         } else {
             $('.navbar').removeClass('sticky-top shadow-sm');
+             // Reset the image src when not scrolled
+             $('#navbar-logo').attr('src', 'img/logo_white.png');
         }
     });
     
